@@ -11,10 +11,19 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        release {
+            storeFile file("dev3l_android.jks")
+            storePassword "supersecret"
+            keyAlias "dev3l_android"
+            keyPassword "supersecret"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 }

@@ -2,5 +2,6 @@
     <string name="app_name">DEV3L-hello-world-android</string>
 
     <string name="hello_world">Hello world!\nThis is my first Android App.\n\nVist My GitHub!\nhttps://github.com/DEV3L</string>
+    <string name="blog_text">Visit my Blog!\nhttps://softwaredev3loper.wordpress.com/</string>
     <string name="action_settings">Settings</string>
 </resources>
