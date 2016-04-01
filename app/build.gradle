@@ -1,8 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.4.1"
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 
     defaultConfig {
         applicationId "dev3l.hello_world_android"
@@ -13,17 +18,17 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("dev3l_android.jks")
-            storePassword "supersecret"
-            keyAlias "dev3l_android"
-            keyPassword "supersecret"
+            keyAlias 'dev3l_android'
+            keyPassword 'supersecret'
+            storeFile file('./dev3l_android.jks')
+            storePassword 'supersecret'
         }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
+            signingConfig signingConfigs.release
         }
     }
 }
